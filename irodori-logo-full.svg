@@ -1,0 +1,24 @@
+<svg width="600" height="520" viewBox="0 0 600 520" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>IRODORI &amp; Co. ロゴ</title>
+  <desc>3つの楕円の中心に3色のドットが重なり合うIRODORI &amp; Co.のロゴ</desc>
+
+  <ellipse fill="none" stroke-width="1.5" cx="300" cy="210" rx="90" ry="130"
+    stroke="#E8909F" transform="rotate(-15 300 210)"/>
+  <ellipse fill="none" stroke-width="1.5" cx="300" cy="210" rx="130" ry="90"
+    stroke="#7AB8D4" transform="rotate(10 300 210)"/>
+  <ellipse fill="none" stroke-width="1.5" cx="300" cy="210" rx="110" ry="115"
+    stroke="#F2C96A" transform="rotate(30 300 210)"/>
+
+  <circle cx="295" cy="213" r="6" fill="#F2C96A" opacity="0.85"/>
+  <circle cx="300" cy="207" r="6" fill="#E8909F" opacity="0.85"/>
+  <circle cx="305" cy="213" r="6" fill="#7AB8D4" opacity="0.85"/>
+
+  <text x="300" y="405" text-anchor="middle"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-weight="400" fill="#181818" letter-spacing="10"
+    font-size="46">IRODORI</text>
+  <text x="300" y="455" text-anchor="middle"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-weight="400" fill="#181818" letter-spacing="8"
+    font-size="28">&amp; Co.</text>
+</svg>

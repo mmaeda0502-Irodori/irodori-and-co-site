@@ -1,0 +1,22 @@
+<svg width="600" height="100" viewBox="0 0 600 100" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>IRODORI &amp; Co. 横長ロゴ</title>
+  <desc>シンボルマークとIRODORI &amp; Co.が1行で横並びのロゴ</desc>
+
+  <!-- シンボル（左） -->
+  <ellipse fill="none" stroke-width="1.2" cx="50" cy="50" rx="28" ry="42"
+    stroke="#E8909F" transform="rotate(-15 50 50)"/>
+  <ellipse fill="none" stroke-width="1.2" cx="50" cy="50" rx="42" ry="28"
+    stroke="#7AB8D4" transform="rotate(10 50 50)"/>
+  <ellipse fill="none" stroke-width="1.2" cx="50" cy="50" rx="36" ry="37"
+    stroke="#F2C96A" transform="rotate(30 50 50)"/>
+
+  <circle cx="47" cy="52" r="3.2" fill="#F2C96A" opacity="0.85"/>
+  <circle cx="50" cy="47" r="3.2" fill="#E8909F" opacity="0.85"/>
+  <circle cx="53" cy="52" r="3.2" fill="#7AB8D4" opacity="0.85"/>
+
+  <!-- IRODORI & Co. 1行 -->
+  <text x="110" y="58" text-anchor="start"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-weight="400" fill="#181818" letter-spacing="7"
+    font-size="34">IRODORI &amp; Co.</text>
+</svg>

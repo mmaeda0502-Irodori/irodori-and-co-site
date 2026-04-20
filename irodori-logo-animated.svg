@@ -1,0 +1,31 @@
+<svg width="600" height="520" viewBox="0 0 600 520" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>IRODORI &amp; Co. アニメーションロゴ</title>
+  <desc>3つの楕円がゆっくり回転するIRODORI &amp; Co.のアニメーションロゴ</desc>
+
+  <style>
+    @keyframes spin1 { from { transform: rotate(-15deg); } to { transform: rotate(345deg); } }
+    @keyframes spin2 { from { transform: rotate(0deg); }   to { transform: rotate(-360deg); } }
+    @keyframes spin3 { from { transform: rotate(30deg); }  to { transform: rotate(390deg); } }
+    .e1 { transform-origin: 300px 210px; animation: spin1 22s linear infinite; }
+    .e2 { transform-origin: 300px 210px; animation: spin2 28s linear infinite; }
+    .e3 { transform-origin: 300px 210px; animation: spin3 18s linear infinite; }
+  </style>
+
+  <ellipse class="e1" fill="none" stroke-width="0.8" cx="300" cy="210" rx="90" ry="130" stroke="#E8909F"/>
+  <ellipse class="e2" fill="none" stroke-width="0.8" cx="300" cy="210" rx="130" ry="90" stroke="#7AB8D4"/>
+  <ellipse class="e3" fill="none" stroke-width="0.8" cx="300" cy="210" rx="110" ry="115" stroke="#F2C96A"/>
+
+  <!-- ドット：中央で重なり合う -->
+  <circle cx="295" cy="213" r="6" fill="#F2C96A" opacity="0.85"/>
+  <circle cx="300" cy="207" r="6" fill="#E8909F" opacity="0.85"/>
+  <circle cx="305" cy="213" r="6" fill="#7AB8D4" opacity="0.85"/>
+
+  <text x="300" y="405" text-anchor="middle"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-weight="400" fill="#181818" letter-spacing="10"
+    font-size="46">IRODORI</text>
+  <text x="300" y="455" text-anchor="middle"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-weight="400" fill="#181818" letter-spacing="8"
+    font-size="28">&amp; Co.</text>
+</svg>

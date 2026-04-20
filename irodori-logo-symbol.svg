@@ -1,0 +1,15 @@
+<svg width="300" height="300" viewBox="0 0 300 300" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>IRODORI &amp; Co. シンボルマーク</title>
+  <desc>3つの楕円の中心に3色のドットが重なり合うシンボルマーク</desc>
+
+  <ellipse fill="none" stroke-width="1.5" cx="150" cy="150" rx="70" ry="105"
+    stroke="#E8909F" transform="rotate(-15 150 150)"/>
+  <ellipse fill="none" stroke-width="1.5" cx="150" cy="150" rx="105" ry="70"
+    stroke="#7AB8D4" transform="rotate(10 150 150)"/>
+  <ellipse fill="none" stroke-width="1.5" cx="150" cy="150" rx="88" ry="92"
+    stroke="#F2C96A" transform="rotate(30 150 150)"/>
+
+  <circle cx="145" cy="153" r="5.5" fill="#F2C96A" opacity="0.85"/>
+  <circle cx="150" cy="147" r="5.5" fill="#E8909F" opacity="0.85"/>
+  <circle cx="155" cy="153" r="5.5" fill="#7AB8D4" opacity="0.85"/>
+</svg>
