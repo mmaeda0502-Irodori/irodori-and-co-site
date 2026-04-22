@@ -670,11 +670,10 @@ nav.scrolled .nav-bg{
 }
 
 /* ── FOOTER ── */
-footer{
-  padding:2.5rem 6vw;
-  display:flex;justify-content:space-between;align-items:center;
-  border-top:1px solid rgba(0,0,0,.07);
-  background:var(--cream);
+footer {
+  padding: 2rem 3rem;
+  border-top: 1px solid rgba(0,0,0,.07);
+  background: var(--cream);
 }
 .footer-logo{
   font-family:'Cormorant Garamond',serif;
@@ -1118,25 +1117,32 @@ footer{
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <span class="footer-logo" style="display:flex;align-items:center;gap:8px;opacity:.6;">
-    <svg width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="18" cy="18" rx="10" ry="15" stroke="#E8909F" stroke-width="0.7" fill="none" transform="rotate(-15 18 18)"/>
-      <ellipse cx="18" cy="18" rx="15" ry="10" stroke="#7AB8D4" stroke-width="0.7" fill="none" transform="rotate(10 18 18)"/>
-      <ellipse cx="18" cy="18" rx="13" ry="13" stroke="#F2C96A" stroke-width="0.7" fill="none" transform="rotate(30 18 18)"/>
-      <circle cx="16.5" cy="18.5" r="1.8" fill="#F2C96A" opacity="0.85"/>
-      <circle cx="18" cy="16.5" r="1.8" fill="#E8909F" opacity="0.85"/>
-      <circle cx="19.5" cy="18.5" r="1.8" fill="#7AB8D4" opacity="0.85"/>
-    </svg>
-    <span style="font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.18em;color:#181818;">IRODORI <span style="font-weight:300;">&amp; Co.</span></span>
-  </span>
-  <div class="footer-dots">
-    <div class="footer-dot"></div>
-    <div class="footer-dot"></div>
-    <div class="footer-dot"></div>
+<footer style="padding:2rem 3rem;">
+  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;">
+    <span class="footer-logo" style="display:flex;align-items:center;gap:8px;opacity:.6;">
+      <svg width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="18" cy="18" rx="10" ry="15" stroke="#E8909F" stroke-width="0.7" fill="none" transform="rotate(-15 18 18)"/>
+        <ellipse cx="18" cy="18" rx="15" ry="10" stroke="#7AB8D4" stroke-width="0.7" fill="none" transform="rotate(10 18 18)"/>
+        <ellipse cx="18" cy="18" rx="13" ry="13" stroke="#F2C96A" stroke-width="0.7" fill="none" transform="rotate(30 18 18)"/>
+        <circle cx="16.5" cy="18.5" r="1.8" fill="#F2C96A" opacity="0.85"/>
+        <circle cx="18" cy="16.5" r="1.8" fill="#E8909F" opacity="0.85"/>
+        <circle cx="19.5" cy="18.5" r="1.8" fill="#7AB8D4" opacity="0.85"/>
+      </svg>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.18em;color:#181818;">IRODORI <span style="font-weight:300;">&amp; Co.</span></span>
+    </span>
+
+    <div class="footer-dots">
+      <div class="footer-dot"></div>
+      <div class="footer-dot"></div>
+      <div class="footer-dot"></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.45rem;">
+      <a href="tokusho.html" style="font-size:.72rem;letter-spacing:.08em;color:#888;text-decoration:none;">特定商取引法に基づく表記</a>
+      <span class="footer-copy">© 2026 IRODORI &amp; Co.</span>
+    </div>
+
   </div>
-  <a href="tokusho.html" style="color:inherit;opacity:.6;text-decoration:none;letter-spacing:.08em;font-size:.75rem;">特定商取引法に基づく表記</a>
-  <span class="footer-copy">© 2026 IRODORI &amp; Co.</span>
 </footer>
 
 <script>
