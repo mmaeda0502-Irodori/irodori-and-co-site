@@ -701,9 +701,19 @@ footer {
   }
   footer > div {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 1rem;
+    gap: .8rem 0;
+  }
+  .footer-logo {
+    flex: 1;
+  }
+  .footer-dots {
+    margin-left: .8rem;
+  }
+  footer > div > div:last-child {
+    width: 100%;
+    align-items: flex-start;
   }
   .footer-logo span {
     font-size: .78rem;
@@ -717,7 +727,6 @@ footer {
   footer a[href="tokusho.html"] {
     font-size: .62rem;
     letter-spacing: .04em;
-    white-space: nowrap;
   }
 }
 
