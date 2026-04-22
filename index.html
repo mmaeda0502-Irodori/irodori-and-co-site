@@ -671,58 +671,55 @@ nav.scrolled .nav-bg{
 
 /* ── FOOTER ── */
 footer {
-  padding: 2rem 3rem;
   border-top: 1px solid rgba(0,0,0,.07);
   background: var(--cream);
 }
-.footer-logo{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1rem;letter-spacing:.18em;color:var(--muted);
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
 }
-.footer-copy{font-size:.65rem;letter-spacing:.1em;color:var(--light);}
-.footer-dots{display:flex;gap:.4rem;}
-.footer-dot{width:6px;height:6px;border-radius:50%;}
-.footer-dot:nth-child(1){background:var(--pink);}
-.footer-dot:nth-child(2){background:var(--blue);}
-.footer-dot:nth-child(3){background:var(--gold);}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .45rem;
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  letter-spacing: .18em;
+  color: var(--muted);
+}
+.footer-copy { font-size:.65rem;letter-spacing:.1em;color:var(--light); }
+.footer-dots { display:flex;gap:.4rem; }
+.footer-dot { width:6px;height:6px;border-radius:50%; }
+.footer-dot:nth-child(1) { background:var(--pink); }
+.footer-dot:nth-child(2) { background:var(--blue); }
+.footer-dot:nth-child(3) { background:var(--gold); }
 
-.hero-catchcopy{
-  display:inline-block;
-  font-family:'Noto Sans JP',sans-serif;
-  font-weight:200;font-size:.82rem;
-  letter-spacing:.22em;color:var(--muted);
-  border-bottom:1px solid rgba(212,168,67,.5);
-  padding-bottom:.3rem;margin-bottom:2rem;
-}
-/* ===== モバイル対応 ===== */
 @media (max-width: 480px) {
-  footer {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 1.5rem 1.2rem;
+    gap: .8rem;
   }
-  footer > div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: .8rem 0;
-  }
-  .footer-logo {
-    flex: 1;
-  }
-  .footer-dots {
-    margin-left: .8rem;
-  }
-  footer > div > div:last-child {
-    width: 100%;
+  .footer-right {
     align-items: flex-start;
   }
   .footer-logo span {
     font-size: .78rem;
     letter-spacing: .1em;
-    white-space: nowrap;
   }
   .footer-copy {
     font-size: .58rem;
-    white-space: nowrap;
   }
   footer a[href="tokusho.html"] {
     font-size: .62rem;
@@ -1151,31 +1148,30 @@ footer {
 </section>
 
 <!-- FOOTER -->
-<footer style="padding:2rem 1.5rem;">
-  <div style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;">
-    <span class="footer-logo" style="display:flex;align-items:center;gap:8px;opacity:.6;">
-      <svg width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="18" cy="18" rx="10" ry="15" stroke="#E8909F" stroke-width="0.7" fill="none" transform="rotate(-15 18 18)"/>
-        <ellipse cx="18" cy="18" rx="15" ry="10" stroke="#7AB8D4" stroke-width="0.7" fill="none" transform="rotate(10 18 18)"/>
-        <ellipse cx="18" cy="18" rx="13" ry="13" stroke="#F2C96A" stroke-width="0.7" fill="none" transform="rotate(30 18 18)"/>
-        <circle cx="16.5" cy="18.5" r="1.8" fill="#F2C96A" opacity="0.85"/>
-        <circle cx="18" cy="16.5" r="1.8" fill="#E8909F" opacity="0.85"/>
-        <circle cx="19.5" cy="18.5" r="1.8" fill="#7AB8D4" opacity="0.85"/>
-      </svg>
-      <span style="font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.18em;color:#181818;">IRODORI <span style="font-weight:300;">&amp; Co.</span></span>
-    </span>
-
-    <div class="footer-dots">
-      <div class="footer-dot"></div>
-      <div class="footer-dot"></div>
-      <div class="footer-dot"></div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-logo" style="display:flex;align-items:center;gap:8px;opacity:.6;">
+        <svg width="24" height="24" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="18" cy="18" rx="10" ry="15" stroke="#E8909F" stroke-width="0.7" fill="none" transform="rotate(-15 18 18)"/>
+          <ellipse cx="18" cy="18" rx="15" ry="10" stroke="#7AB8D4" stroke-width="0.7" fill="none" transform="rotate(10 18 18)"/>
+          <ellipse cx="18" cy="18" rx="13" ry="13" stroke="#F2C96A" stroke-width="0.7" fill="none" transform="rotate(30 18 18)"/>
+          <circle cx="16.5" cy="18.5" r="1.8" fill="#F2C96A" opacity="0.85"/>
+          <circle cx="18" cy="16.5" r="1.8" fill="#E8909F" opacity="0.85"/>
+          <circle cx="19.5" cy="18.5" r="1.8" fill="#7AB8D4" opacity="0.85"/>
+        </svg>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:.95rem;letter-spacing:.18em;color:#181818;">IRODORI <span style="font-weight:300;">&amp; Co.</span></span>
+      </span>
+      <div class="footer-dots">
+        <div class="footer-dot"></div>
+        <div class="footer-dot"></div>
+        <div class="footer-dot"></div>
+      </div>
     </div>
-
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.45rem;">
+    <div class="footer-right">
       <a href="tokusho.html" style="font-size:.72rem;letter-spacing:.08em;color:#888;text-decoration:none;">特定商取引法に基づく表記</a>
       <span class="footer-copy">© 2026 IRODORI &amp; Co.</span>
     </div>
-
   </div>
 </footer>
 
