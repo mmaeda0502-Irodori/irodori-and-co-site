@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IRODORI & Co. | 実装型プロデュース</title>
+<title>IRODORI & Co. | 航路の伴走者</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -126,6 +126,16 @@ nav.scrolled .nav-bg{
   margin-bottom:2.5rem;
 }
 .hero-tag-line{width:2.4rem;height:2px;background:var(--pink);}
+
+.hero-catchcopy{
+  display:block;
+  font-family:'Noto Serif JP',serif;
+  font-weight:300;
+  font-size:.82rem;
+  letter-spacing:.18em;
+  color:var(--muted);
+  margin-bottom:1.6rem;
+}
 
 .hero-title{
   font-family:'Noto Sans JP',sans-serif;
@@ -1113,8 +1123,8 @@ footer {
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-tag"><span class="hero-tag-line"></span>実装型プロデュース</p>
-    <span class="hero-catchcopy">想いをカタチに、未来に彩りを。</span>
+    <p class="hero-tag"><span class="hero-tag-line"></span>航路の伴走者</p>
+    <span class="hero-catchcopy">想いを形にする「航路」に彩りを添える</span>
     <h1 class="hero-title">
       あなたの「想い」を、動き出せる地図へ。<br><span class="accent">— Turning Vision into Motion —</span>
     </h1>
@@ -1150,7 +1160,7 @@ footer {
     <div class="pain-header">
       <p class="s-label reveal" style="color:rgba(255,255,255,.3)">For whom</p>
       <h2 class="s-title reveal reveal-delay-1" style="color:var(--white)">「やりたいことはある、でも<br>どこから手をつければいいか…」</h2>
-      <p class="reveal reveal-delay-2" style="margin-top:1.2rem;font-size:.85rem;color:rgba(255,255,255,.35);line-height:1.9;">ひとりで何かを始めようとしている方も、チームに変化を起こしたい方も。<br>想いを持つリーダーが直面する、3つの壁</p>
+      <p class="reveal reveal-delay-2" style="margin-top:1.2rem;font-size:.85rem;color:rgba(255,255,255,.35);line-height:1.9;">ひとりで何かを始めようとしている方も、チームに変化を起こしたい方も。<br>想いを持つ人が直面する、3つの壁</p>
     </div>
     <div class="pain-grid">
       <div class="pain-item reveal">
@@ -1186,7 +1196,7 @@ footer {
         </svg>
         <div class="pain-marker"></div>
         <h3>一人で抱えすぎている</h3>
-        <p>相談できる相手がいない。孤独な意思決定の積み重ねが、リーダーの歩みを少しずつ重くしていく。</p>
+        <p>相談できる相手がいない。孤独な意思決定の積み重ねが、想いを持つ人の歩みを少しずつ重くしていく。</p>
       </div>
     </div>
   </div>
@@ -1264,6 +1274,7 @@ footer {
       <div class="svc-group-header">
         <span class="svc-group-en">Trial Session</span>
         <span class="svc-group-jp">体験航海</span>
+        <span style="font-size:.62rem;color:var(--light);letter-spacing:.1em;margin-left:auto;">※ リピート受講可</span>
       </div>
       <div class="svc-cards two-col">
 
@@ -1354,11 +1365,9 @@ footer {
 
       <!-- ② フル幅 -->
       <div class="svc-cards one-col" style="margin-bottom:1.5rem;">
-        <div class="svc-card card-feature">
+        <div class="svc-card card-feature-blue">
           <div class="svc-card-head">
-            <div class="svc-card-num n-pink">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- メイン：帆船 -->
+            <div class="svc-card-num n-blue">
               <!-- 波（下） -->
               <path d="M4 52 Q12 48 20 52 Q28 56 36 52 Q44 48 52 52 Q58 54 60 52" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".3" fill="none"/>
               <path d="M2 56 Q10 52 18 56 Q26 60 34 56 Q42 52 50 56 Q56 58 60 56" stroke="currentColor" stroke-width=".8" stroke-linecap="round" opacity=".2" fill="none"/>
@@ -1374,7 +1383,7 @@ footer {
               <path d="M32 10 L38 12 L32 14 Z" fill="currentColor" opacity=".7"/>
             </svg>
           </div>
-            <span class="svc-card-index n-pink">02</span>
+            <span class="svc-card-index n-blue">02</span>
           </div>
           <span class="svc-card-tag">2ヶ月集中</span>
           <h3 class="svc-card-title">帆を上げる：設計図プロデュース</h3>
@@ -1395,7 +1404,7 @@ footer {
           <div class="svc-card-price-note">2ヶ月 / 税込</div>
           <div class="svc-scarcity-note">
             <span class="svc-scarcity-dot"></span>
-            <span>しっかりよりそって伴走するため、同時にお受けするのは<strong>常時3席まで</strong>。</span>
+            <span>しっかり寄り添って伴走するため、同時にお受けするのは<strong>常時3席まで</strong>。</span>
           </div>
         </div>
       </div>
@@ -1456,7 +1465,7 @@ footer {
 
       <!-- 伴走プラン統一CTA -->
       <div class="svc-voyage-cta-wrap">
-        <p class="svc-voyage-cta-lead">伴走プランは、まずは対話から。</p>
+        <p class="svc-voyage-cta-lead">あなたの航路を、一緒に考えます。</p>
         <a href="https://www.instagram.com/mamiki_irodori" target="_blank" rel="noopener noreferrer" class="svc-cta svc-cta-gradient svc-voyage-cta">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
           伴走サポートのお問い合わせはこちら
@@ -1499,6 +1508,7 @@ footer {
       <p class="s-label">Profile</p>
       <h2 class="profile-name-ja">まみき</h2>
       <p class="profile-role">Miki Akune ／ 阿久根 美貴　IRODORI &amp; Co. 代表</p>
+      <p style="font-size:.75rem;letter-spacing:.12em;color:var(--muted);margin-bottom:1.8rem;font-family:'Noto Serif JP',serif;font-weight:300;">想いを形にする「航路」に彩りを添える人</p>
       <div class="profile-divider"></div>
       <p class="profile-text">
         国内大手IT企業でキャリアスタート。SEとして構造化の力を磨き、インターナルコミュニケーションと組織変革の両輪で、仕組みと人の心、両面から変化を生み出してきました。<br><br>
