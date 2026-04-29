@@ -713,7 +713,7 @@ nav.scrolled .nav-bg{
   margin-top:3.5rem;
   padding:1.75rem 2.25rem;
   background:linear-gradient(135deg,rgba(232,144,159,.04),rgba(122,184,212,.04));
-  border:1px solid rgba(0,0,0,.08);
+  border:1px solid rgba(212,168,67,.4);
   display:flex;align-items:center;justify-content:space-between;
   flex-wrap:wrap;gap:1rem;
 }
@@ -942,6 +942,14 @@ nav.scrolled .nav-bg{
   letter-spacing:.1em;line-height:1.9;margin-top:1.5rem;
 }
 
+/* ── FAQ ACCORDION ── */
+.faq-item{border:1px solid rgba(0,0,0,.08);border-radius:8px;margin-bottom:.75rem;overflow:hidden;background:var(--white);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.4rem;font-size:.82rem;color:var(--ink);font-weight:400;letter-spacing:.04em;line-height:1.7;cursor:pointer;list-style:none;gap:1rem;}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q::after{content:'＋';font-size:.9rem;color:var(--muted);flex-shrink:0;}
+details[open] .faq-q::after{content:'－';}
+.faq-a{font-size:.79rem;color:var(--muted);line-height:2;padding:.2rem 1.4rem 1.2rem;border-top:1px solid rgba(0,0,0,.05);}
+
 /* ── FOOTER ── */
 footer {
   border-top: 1px solid rgba(0,0,0,.07);
@@ -1112,6 +1120,7 @@ footer {
       <a href="#usp">選ばれる理由</a>
       <a href="#services">サービス・料金</a>
       <a href="#profile">プロフィール</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a href="https://www.instagram.com/mamiki_irodori" target="_blank" class="nav-ig">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
@@ -1173,7 +1182,7 @@ footer {
         <div class="pain-num">02</div>
         <div class="pain-marker"></div>
         <h3>地図がなくて迷っている</h3>
-        <p>ビジョンは明確なのに、具体的なロードマップに落とし込めず、周囲を巻き込むための「武器」がない。</p>
+        <p>ビジョンはぼんやりある。でも、どこから手をつければいいかわからない。言葉にしようとしても、うまく形にならない。</p>
       </div>
       <div class="pain-item reveal reveal-delay-2">
         <div class="pain-num">03</div>
@@ -1347,16 +1356,8 @@ footer {
         <span class="svc-group-jp">伴走プラン</span>
       </div>
 
-      <!-- ②→③の繋ぎ（上に移動） -->
-      <div class="svc-bridge">
-        <span class="svc-bridge-line"></span>
-        <p class="svc-bridge-text">「設計図プロデュース」で整え、「定期航海サポート」で動かしつづける。</p>
-        <span class="svc-bridge-line"></span>
-      </div>
-      <p style="text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.1em;margin-bottom:1.8rem;">※「解像度セッション」または「設計図プロデュース」修了後にご案内します</p>
-
-      <!-- ②③ 横並び -->
-      <div class="svc-cards two-col">
+      <!-- ② フル幅 -->
+      <div class="svc-cards one-col" style="margin-bottom:1.5rem;">
         <div class="svc-card card-feature-blue">
           <div class="svc-card-head">
             <div class="svc-card-num n-blue">
@@ -1400,6 +1401,18 @@ footer {
             <span>しっかり寄り添って伴走するため、同時にお受けするのは<strong>常時3席まで</strong>。</span>
           </div>
         </div>
+      </div>
+
+      <!-- ②→③の繋ぎ -->
+      <div class="svc-bridge">
+        <span class="svc-bridge-line"></span>
+        <p class="svc-bridge-text">「設計図プロデュース」で整え、「定期航海サポート」で動かしつづける。</p>
+        <span class="svc-bridge-line"></span>
+      </div>
+      <p style="text-align:center;font-size:.72rem;color:var(--muted);letter-spacing:.1em;margin-bottom:1.8rem;">※「解像度セッション」または「設計図プロデュース」修了後にご案内します</p>
+
+      <!-- ③ フル幅 -->
+      <div class="svc-cards one-col">
 
         <!-- ③ 潮に乗る -->
         <div class="svc-card card-feature-blue">
@@ -1514,6 +1527,38 @@ footer {
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" style="padding:5rem 0;background:var(--cream);">
+  <div style="max-width:720px;margin:0 auto;padding:0 6vw;">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.25em;color:var(--muted);margin-bottom:.6rem;">FAQ</p>
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1.4rem;font-weight:400;letter-spacing:.1em;color:var(--ink);margin-bottom:3rem;">よくあるご質問</h2>
+    <details class="faq-item">
+      <summary class="faq-q">セッションはオンラインのみですか？</summary>
+      <p class="faq-a">はい、オンライン（Zoom）のみとなります。</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">どんな業種・職種の方が対象ですか？</summary>
+      <p class="faq-a">業種・職種は問いません。「想いはあるのに、動き方がわからない」と感じている方であればどなたでもお申し込みいただけます。</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">解像度セッションを受けていなくても設計図プロデュースに申し込めますか？</summary>
+      <p class="faq-a">はい、申し込みいただけます。初回セッションでじっくりヒアリングした後、全4回のセッションでサポートします。</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">支払い方法は？</summary>
+      <p class="faq-a">羅針盤セッション・解像度セッションはクレジットカード決済、設計図プロデュース・定期航海サポートは銀行振込（原則一括・分割は要相談）となります。</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">キャンセルポリシーを確認したいのですが？</summary>
+      <p class="faq-a"><a href="cancel.html" style="color:var(--pink);text-decoration:none;">キャンセルポリシーのページ</a>をご確認ください。</p>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">現在の空き状況を知りたいのですが？</summary>
+      <p class="faq-a">最新の空き状況はInstagramにてお知らせしています。ぜひフォローしてご確認ください。<br><a href="https://www.instagram.com/mamiki_irodori" target="_blank" rel="noopener noreferrer" style="color:var(--pink);text-decoration:none;">@mamiki_irodori</a></p>
+    </details>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -1537,6 +1582,7 @@ footer {
     </div>
     <div class="footer-right">
       <a href="tokusho.html" style="font-size:.72rem;letter-spacing:.08em;color:#888;text-decoration:none;">特定商取引法に基づく表記</a>
+      <a href="cancel.html" style="font-size:.72rem;letter-spacing:.08em;color:#888;text-decoration:none;">キャンセルポリシー</a>
       <span class="footer-copy">© 2026 IRODORI &amp; Co.</span>
     </div>
   </div>
