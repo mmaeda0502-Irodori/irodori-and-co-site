@@ -1093,7 +1093,7 @@ footer {
   .svc-option-row{flex-direction:column;align-items:flex-start;}
   .svc-option-price-note{text-align:left;}
   .profile-inner{grid-template-columns:1fr;grid-template-rows:auto;gap:3rem;}
-  .profile-inner > div[style*="grid-row:2"]{margin-top:0;}
+  .profile-inner > div[style*="grid-row"]{grid-row:auto !important;margin-top:0;}
   .profile-img{aspect-ratio:1;}
   nav .nav-links{display:none;}
 }
@@ -1495,7 +1495,7 @@ footer {
     <!-- 写真（左上） -->
     <div class="reveal" style="grid-row:1;">
       <div class="profile-img-wrap">
-        <div class="profile-img" style="padding:3px;background:linear-gradient(135deg,#E8909F,#7AB8D4,#F2C96A);border-radius:50%;aspect-ratio:1;border:none;"><div style="width:100%;height:100%;border-radius:50%;overflow:hidden;">
+        <div class="profile-img" style="padding:3px;background:linear-gradient(135deg,#E8909F,#7AB8D4,#F2C96A);border-radius:50%;aspect-ratio:1;border:none;"><div style="position:absolute;inset:3px;border-radius:50%;overflow:hidden;">
           <img src="mamiki.jpeg" alt="まみき（阿久根 美貴）" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;"></div>
         </div>
       </div>
