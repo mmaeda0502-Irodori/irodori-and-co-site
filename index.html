@@ -250,6 +250,41 @@ nav.scrolled .nav-bg{
 }
 .cta-final-btns{display:flex;flex-direction:column;align-items:center;gap:1.3rem;}
 
+/* CTA下の安心ライン */
+.cta-note{
+  font-size:.7rem;color:var(--muted);letter-spacing:.08em;
+  line-height:1.9;margin-top:1.1rem;
+}
+
+/* ── FLOW（お申し込みの流れ） ── */
+#flow{padding:6rem 6vw;background:var(--cream);}
+.flow-inner{max-width:920px;margin:0 auto;}
+.flow-title{
+  font-family:'Noto Serif JP',serif;font-weight:400;
+  font-size:clamp(1.3rem,2.6vw,1.7rem);letter-spacing:.08em;
+  color:var(--ink);text-align:center;margin:.5rem 0 3rem;
+}
+.flow-steps{display:flex;align-items:stretch;justify-content:center;gap:1rem;}
+.flow-step{
+  flex:1 1 0;background:var(--white);
+  border:1px solid rgba(0,0,0,.05);border-radius:4px;
+  padding:2rem 1.5rem;text-align:center;
+}
+.flow-step-num{
+  font-family:'Cormorant Garamond',serif;font-size:1.5rem;
+  letter-spacing:.1em;color:var(--blue);display:block;margin-bottom:.5rem;
+}
+.flow-step-head{
+  font-size:.95rem;font-weight:500;color:var(--ink);
+  margin-bottom:.6rem;letter-spacing:.05em;
+}
+.flow-step-text{font-size:.78rem;color:var(--muted);line-height:1.9;}
+.flow-arrow{display:flex;align-items:center;color:var(--light);font-size:1.2rem;}
+@media(max-width:900px){
+  .flow-steps{flex-direction:column;}
+  .flow-arrow{justify-content:center;transform:rotate(90deg);}
+}
+
 /* ── ハンバーガー（既定は非表示） ── */
 .nav-toggle{display:none;border:none;background:transparent;}
 
@@ -1403,8 +1438,9 @@ footer {
     </p>
 
     <div class="hero-btns">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUe-a_RsPJgCZf45Q6meYDEs7vUEw_AyQzO5TdB1CpSqXb3w/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-cta">まずは体験航海から<span class="btn-cta-price">¥3,300</span></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUe-a_RsPJgCZf45Q6meYDEs7vUEw_AyQzO5TdB1CpSqXb3w/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-cta">体験航海を予約する<span class="btn-cta-price">¥3,300</span></a>
       <a href="#services" class="btn-text">サービス・料金を見る</a>
+      <p class="cta-note">オンライン（Zoom）45分・1回完結／カード決済</p>
     </div>
 
   </div>
@@ -1983,6 +2019,33 @@ footer {
   </div>
 </section>
 
+<!-- FLOW -->
+<section id="flow">
+  <div class="flow-inner reveal">
+    <p class="s-label" style="text-align:center;color:var(--muted);">Flow</p>
+    <h2 class="flow-title">お申し込みの流れ</h2>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <span class="flow-step-num">01</span>
+        <h3 class="flow-step-head">お申し込み</h3>
+        <p class="flow-step-text">フォームから送信。1分ほどで完了します。</p>
+      </div>
+      <span class="flow-arrow" aria-hidden="true">→</span>
+      <div class="flow-step">
+        <span class="flow-step-num">02</span>
+        <h3 class="flow-step-head">日程調整</h3>
+        <p class="flow-step-text">メールで候補日をご相談し、日時を決定します。</p>
+      </div>
+      <span class="flow-arrow" aria-hidden="true">→</span>
+      <div class="flow-step">
+        <span class="flow-step-num">03</span>
+        <h3 class="flow-step-head">オンラインセッション</h3>
+        <p class="flow-step-text">当日Zoomで対話。後日、セッションメモをお届けします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSING CTA -->
 <section id="cta-final">
   <div class="cta-final-inner reveal">
@@ -1990,9 +2053,10 @@ footer {
     <h2 class="cta-final-title">小さな一歩を、いっしょに。</h2>
     <p class="cta-final-lead">「やりたい」はあるのに動けない——そのモヤモヤを、まずは45分の対話でほどくところから。<br>気軽に試せる体験航海（¥3,300）をご用意しています。</p>
     <div class="cta-final-btns">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUe-a_RsPJgCZf45Q6meYDEs7vUEw_AyQzO5TdB1CpSqXb3w/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-cta">体験航海を申し込む<span class="btn-cta-price">¥3,300</span></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUe-a_RsPJgCZf45Q6meYDEs7vUEw_AyQzO5TdB1CpSqXb3w/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-cta">45分の体験を予約する<span class="btn-cta-price">¥3,300</span></a>
       <a href="https://forms.gle/rpCqTaLmSjnhXxao6" target="_blank" rel="noopener noreferrer" class="btn-text">まずは質問・相談する</a>
     </div>
+    <p class="cta-note">オンライン（Zoom）／1回完結／カード決済対応</p>
   </div>
 </section>
 
@@ -2038,7 +2102,7 @@ footer {
 
 <!-- MOBILE STICKY CTA -->
 <div class="mobile-cta-bar">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUe-a_RsPJgCZf45Q6meYDEs7vUEw_AyQzO5TdB1CpSqXb3w/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn">体験航海を申し込む<span class="mobile-cta-price">¥3,300</span></a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUe-a_RsPJgCZf45Q6meYDEs7vUEw_AyQzO5TdB1CpSqXb3w/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn">体験航海を予約する<span class="mobile-cta-price">¥3,300</span></a>
 </div>
 
 <script>
