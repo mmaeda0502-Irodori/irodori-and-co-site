@@ -256,35 +256,6 @@ nav.scrolled .nav-bg{
   line-height:1.9;margin-top:1.1rem;
 }
 
-/* ── FLOW（お申し込みの流れ） ── */
-#flow{padding:6rem 6vw;background:var(--cream);}
-.flow-inner{max-width:920px;margin:0 auto;}
-.flow-title{
-  font-family:'Noto Serif JP',serif;font-weight:400;
-  font-size:clamp(1.3rem,2.6vw,1.7rem);letter-spacing:.08em;
-  color:var(--ink);text-align:center;margin:.5rem 0 3rem;
-}
-.flow-steps{display:flex;align-items:stretch;justify-content:center;gap:1rem;}
-.flow-step{
-  flex:1 1 0;background:var(--white);
-  border:1px solid rgba(0,0,0,.05);border-radius:4px;
-  padding:2rem 1.5rem;text-align:center;
-}
-.flow-step-num{
-  font-family:'Cormorant Garamond',serif;font-size:1.5rem;
-  letter-spacing:.1em;color:var(--blue);display:block;margin-bottom:.5rem;
-}
-.flow-step-head{
-  font-size:.95rem;font-weight:500;color:var(--ink);
-  margin-bottom:.6rem;letter-spacing:.05em;
-}
-.flow-step-text{font-size:.78rem;color:var(--muted);line-height:1.9;}
-.flow-arrow{display:flex;align-items:center;color:var(--light);font-size:1.2rem;}
-@media(max-width:900px){
-  .flow-steps{flex-direction:column;}
-  .flow-arrow{justify-content:center;transform:rotate(90deg);}
-}
-
 /* ── ハンバーガー（既定は非表示） ── */
 .nav-toggle{display:none;border:none;background:transparent;}
 
@@ -2016,33 +1987,6 @@ footer {
       <summary class="faq-q">現在の空き状況を知りたいのですが？</summary>
       <p class="faq-a">最新の空き状況はInstagramでお知らせしています。セッションの枠は限られているため、気になったタイミングでぜひチェックしてみてください。<br><a href="https://www.instagram.com/mamiki_irodori" target="_blank" rel="noopener noreferrer" style="color:var(--pink);text-decoration:none;">@mamiki_irodori</a></p>
     </details>
-  </div>
-</section>
-
-<!-- FLOW -->
-<section id="flow">
-  <div class="flow-inner reveal">
-    <p class="s-label" style="text-align:center;color:var(--muted);">Flow</p>
-    <h2 class="flow-title">お申し込みの流れ</h2>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <span class="flow-step-num">01</span>
-        <h3 class="flow-step-head">お申し込み</h3>
-        <p class="flow-step-text">フォームから送信。1分ほどで完了します。</p>
-      </div>
-      <span class="flow-arrow" aria-hidden="true">→</span>
-      <div class="flow-step">
-        <span class="flow-step-num">02</span>
-        <h3 class="flow-step-head">日程調整</h3>
-        <p class="flow-step-text">メールで候補日をご相談し、日時を決定します。</p>
-      </div>
-      <span class="flow-arrow" aria-hidden="true">→</span>
-      <div class="flow-step">
-        <span class="flow-step-num">03</span>
-        <h3 class="flow-step-head">オンラインセッション</h3>
-        <p class="flow-step-text">当日Zoomで対話。後日、セッションメモをお届けします。</p>
-      </div>
-    </div>
   </div>
 </section>
 
