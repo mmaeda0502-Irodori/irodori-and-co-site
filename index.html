@@ -1690,6 +1690,36 @@ footer {
 </div>
 
 <script>
+// CTA click tracking (GA4) — フォームリンクのクリックをコンバージョンとして計測
+(function(){
+  function offerOf(href){
+    if(href.indexOf('rpCqTaLmSjnhXxao6') > -1) return 'free_consult';      // 無料15分相談
+    if(href.indexOf('1FAIpQLSdUe') > -1)       return 'trial_3300';        // 体験航海 ¥3,300
+    if(href.indexOf('1FAIpQLSdiJsIs') > -1)    return 'session_16500';     // 解像度セッション ¥16,500
+    return 'other_form';
+  }
+  function placementOf(el){
+    if(el.closest('.mobile-cta-bar')) return 'mobile_sticky';
+    if(el.closest('#cta-final'))      return 'final_cta';
+    if(el.closest('nav'))             return 'nav';
+    var sec = el.closest('section');
+    return (sec && sec.id) ? sec.id : 'other';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href]');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    if(href.indexOf('forms.gle') === -1 && href.indexOf('docs.google.com/forms') === -1) return;
+    if(typeof gtag !== 'function') return;
+    gtag('event', 'cta_click', {
+      cta_offer: offerOf(href),
+      cta_placement: placementOf(a),
+      cta_label: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 80),
+      link_url: href
+    });
+  }, true);
+})();
+
 // Scroll reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
