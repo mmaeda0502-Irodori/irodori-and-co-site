@@ -875,9 +875,9 @@ footer {
   content:'';position:absolute;
   top:0;bottom:0;left:0;width:3px;
 }
-.voice-card:nth-child(1)::before{background:linear-gradient(to bottom,var(--pink),rgba(232,144,159,.3));}
-.voice-card:nth-child(2)::before{background:linear-gradient(to bottom,var(--blue),rgba(122,184,212,.3));}
-.voice-card:nth-child(3)::before{background:linear-gradient(to bottom,var(--gold),rgba(212,168,67,.3));}
+.voice-card:nth-child(3n+1)::before{background:linear-gradient(to bottom,var(--pink),rgba(232,144,159,.3));}
+.voice-card:nth-child(3n+2)::before{background:linear-gradient(to bottom,var(--blue),rgba(122,184,212,.3));}
+.voice-card:nth-child(3n)::before{background:linear-gradient(to bottom,var(--gold),rgba(212,168,67,.3));}
 .voice-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.07);transform:translateY(-3px);}
 .voice-aside{
   flex:0 0 140px;
@@ -898,18 +898,18 @@ footer {
   width:60px;height:60px;
   display:block;margin-bottom:.4rem;
 }
-.voice-card:nth-child(1) .voice-icon{color:var(--pink);}
-.voice-card:nth-child(2) .voice-icon{color:var(--blue);}
-.voice-card:nth-child(3) .voice-icon{color:var(--gold);}
+.voice-card:nth-child(3n+1) .voice-icon{color:var(--pink);}
+.voice-card:nth-child(3n+2) .voice-icon{color:var(--blue);}
+.voice-card:nth-child(3n) .voice-icon{color:var(--gold);}
 .voice-quote-mark{
   font-family:'Cormorant Garamond',serif;
   font-size:1.8rem;line-height:.7;
   display:block;margin-bottom:.4rem;
   font-weight:400;opacity:.5;
 }
-.voice-card:nth-child(1) .voice-quote-mark{color:var(--pink);}
-.voice-card:nth-child(2) .voice-quote-mark{color:var(--blue);}
-.voice-card:nth-child(3) .voice-quote-mark{color:var(--gold);}
+.voice-card:nth-child(3n+1) .voice-quote-mark{color:var(--pink);}
+.voice-card:nth-child(3n+2) .voice-quote-mark{color:var(--blue);}
+.voice-card:nth-child(3n) .voice-quote-mark{color:var(--gold);}
 
 .voice-headline{
   font-family:'Noto Serif JP',serif;
@@ -942,6 +942,21 @@ footer {
   font-size:.7rem;color:var(--muted);
   letter-spacing:.08em;line-height:1.7;
 }
+/* 4件目以降は「ほかの声も読む」で表示（JS無効時は全件表示） */
+.voice-card[hidden]{display:none;}
+.voices-more{text-align:center;margin-top:2.4rem;}
+.voices-more[hidden]{display:none;}
+.voices-more-btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:.9rem 2.2rem;border-radius:999px;
+  background:transparent;border:1px solid rgba(0,0,0,.18);
+  font-family:'Noto Sans JP',sans-serif;font-size:.8rem;
+  letter-spacing:.1em;color:var(--ink);cursor:pointer;
+  transition:border-color .25s,color .25s,gap .2s;
+}
+.voices-more-btn::after{content:'↓';color:var(--pink);}
+.voices-more-btn:hover{border-color:var(--pink);gap:.9rem;}
+.voices-more-btn:focus-visible{outline:2px solid var(--pink);outline-offset:3px;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
@@ -1434,7 +1449,7 @@ footer {
       <!-- ─────────── VOICE 01 (pink) ─────────── -->
       <article class="voice-card reveal">
         <div class="voice-aside">
-        <span class="voice-card-num">01 / 03</span>
+        <span class="voice-card-num">01 / 05</span>
         <svg class="voice-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- 周りの泡 -->
           <circle cx="10" cy="14" r="1.6" fill="currentColor" opacity=".4"/>
@@ -1472,7 +1487,7 @@ footer {
       <!-- ─────────── VOICE 02 (blue) ─────────── -->
       <article class="voice-card reveal">
         <div class="voice-aside">
-        <span class="voice-card-num">02 / 03</span>
+        <span class="voice-card-num">02 / 05</span>
         <svg class="voice-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- 周りの泡 -->
           <circle cx="10" cy="14" r="1.6" fill="currentColor" opacity=".4"/>
@@ -1510,7 +1525,7 @@ footer {
       <!-- ─────────── VOICE 03 (gold) ─────────── -->
       <article class="voice-card reveal">
         <div class="voice-aside">
-        <span class="voice-card-num">03 / 03</span>
+        <span class="voice-card-num">03 / 05</span>
         <svg class="voice-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <!-- 周りの泡 -->
           <circle cx="10" cy="14" r="1.6" fill="currentColor" opacity=".4"/>
@@ -1543,7 +1558,86 @@ footer {
         <p class="voice-attr">40代・起業家 ／ 伴走プラン受講</p>
         </div><!-- /.voice-body -->
       </article>
+
+      <!-- ─────────── VOICE 04 (pink) ─────────── -->
+      <article class="voice-card voice-extra reveal" id="voice-04">
+        <div class="voice-aside">
+        <span class="voice-card-num">04 / 05</span>
+        <svg class="voice-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- 周りの泡 -->
+          <circle cx="10" cy="14" r="1.6" fill="currentColor" opacity=".4"/>
+          <circle cx="54" cy="22" r="1.2" fill="currentColor" opacity=".3"/>
+          <circle cx="52" cy="48" r="1.8" fill="currentColor" opacity=".4"/>
+          <circle cx="9" cy="46" r="1.2" fill="currentColor" opacity=".35"/>
+          <!-- コルク -->
+          <path d="M26 6 L38 6 Q40 6 40 8 L40 12 Q40 14 38 14 L26 14 Q24 14 24 12 L24 8 Q24 6 26 6 Z" fill="currentColor" opacity=".7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- 瓶本体 -->
+          <path d="M28 14 L28 20 Q22 22 22 28 L22 52 Q22 58 32 58 Q42 58 42 52 L42 28 Q42 22 36 20 L36 14 Z" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+          <!-- 中の手紙 -->
+          <path d="M27 32 Q26 32 26 33 L26 44 Q26 45 27 45 L37 45 Q38 45 38 44 L38 33 Q38 32 37 32 Z" fill="currentColor" opacity=".55" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <!-- 手紙の文字行 -->
+          <line x1="29" y1="36" x2="35" y2="36" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".75"/>
+          <line x1="29" y1="39" x2="34" y2="39" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".75"/>
+          <line x1="29" y1="42" x2="33" y2="42" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".75"/>
+          <!-- 瓶の光沢 -->
+          <line x1="27" y1="26" x2="27" y2="38" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".4"/>
+        </svg>
+        </div><!-- /.voice-aside -->
+        <div class="voice-body">
+        <span class="voice-quote-mark">&ldquo;</span>
+        <p class="voice-headline">コンパスが見つかってきた気がします。</p>
+        <p class="voice-text">
+          まみきちゃんが、アンケート内容から私に必要そうなアンテナをくれたこと。<br>
+          企業に届けるということばかり考えていたが、講座を開いて意識高い会社員を呼び込む方が合っている気がした。<br>
+          まみきちゃん、頭の中を整理してくれてありがとうー羅針盤セッション非常によかったです！！
+        </p>
+        <div class="voice-divider"></div>
+        <p class="voice-name">寺田 有利 さん</p>
+        <p class="voice-attr">会社員 ／ 羅針盤セッション受講</p>
+        </div><!-- /.voice-body -->
+      </article>
+
+      <!-- ─────────── VOICE 05 (blue) ─────────── -->
+      <article class="voice-card voice-extra reveal" id="voice-05">
+        <div class="voice-aside">
+        <span class="voice-card-num">05 / 05</span>
+        <svg class="voice-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- 周りの泡 -->
+          <circle cx="10" cy="14" r="1.6" fill="currentColor" opacity=".4"/>
+          <circle cx="54" cy="22" r="1.2" fill="currentColor" opacity=".3"/>
+          <circle cx="52" cy="48" r="1.8" fill="currentColor" opacity=".4"/>
+          <circle cx="9" cy="46" r="1.2" fill="currentColor" opacity=".35"/>
+          <!-- コルク -->
+          <path d="M26 6 L38 6 Q40 6 40 8 L40 12 Q40 14 38 14 L26 14 Q24 14 24 12 L24 8 Q24 6 26 6 Z" fill="currentColor" opacity=".7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- 瓶本体 -->
+          <path d="M28 14 L28 20 Q22 22 22 28 L22 52 Q22 58 32 58 Q42 58 42 52 L42 28 Q42 22 36 20 L36 14 Z" fill="currentColor" opacity=".15" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+          <!-- 中の手紙 -->
+          <path d="M27 32 Q26 32 26 33 L26 44 Q26 45 27 45 L37 45 Q38 45 38 44 L38 33 Q38 32 37 32 Z" fill="currentColor" opacity=".55" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <!-- 手紙の文字行 -->
+          <line x1="29" y1="36" x2="35" y2="36" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".75"/>
+          <line x1="29" y1="39" x2="34" y2="39" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".75"/>
+          <line x1="29" y1="42" x2="33" y2="42" stroke="currentColor" stroke-width=".9" stroke-linecap="round" opacity=".75"/>
+          <!-- 瓶の光沢 -->
+          <line x1="27" y1="26" x2="27" y2="38" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".4"/>
+        </svg>
+        </div><!-- /.voice-aside -->
+        <div class="voice-body">
+        <span class="voice-quote-mark">&ldquo;</span>
+        <p class="voice-headline">「自分で考え・自分で決める」では無く、<br>「家族と考え・家族で決める」というやり方を大切にしたい。</p>
+        <p class="voice-text">
+          セッションを通じて、個人的に前に進めたいと先に急ごうとする点を客観的に話をして頂きました。それを通じて、これまでの自分にとって当たり前に思っていた「結論を定めてから話をする」は、みんなにとって正解ではないのだと気付かされました。このまま先を急いでいたら、正論だけを振りかざして大切な存在を失いかねないところでした。<br>
+          家族がいて大切な決断をする際に、例えるなら事業計画書を纏めてから報告し決裁を得るのではなく、その事業計画書をどんな形にしていくかを一緒に悩みながら進めていくことこそが大切なのだと印象に残りました。<br>
+          自分が進みたい方向や、今の現状から抜け出したいという気持ちが固まっている事を客観的かつ明確に知ることができました。但し、その進め方についてはこれまでのような「自分で考え・自分で決める」では無く、「家族と考え・家族で決める」というやり方を大切にしたいと思います。
+        </p>
+        <div class="voice-divider"></div>
+        <p class="voice-name">H.O. さん</p>
+        <p class="voice-attr">30代・会社員 ／ 解像度セッション受講</p>
+        </div><!-- /.voice-body -->
+      </article>
     </div><!-- /.voices-list -->
+    <div class="voices-more" hidden>
+      <button type="button" class="voices-more-btn" aria-expanded="false" aria-controls="voice-04 voice-05">ほかの声も読む（2件）</button>
+    </div>
   </div>
 </section>
 
@@ -1734,6 +1828,25 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
 }, {threshold:.1});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Voices: 最初は3件だけ表示し、残りは「ほかの声も読む」で開く
+(function(){
+  const extras = document.querySelectorAll('.voice-extra');
+  const more = document.querySelector('.voices-more');
+  const btn = more && more.querySelector('.voices-more-btn');
+  if(!extras.length || !btn) return;
+  extras.forEach(el => { el.hidden = true; });
+  more.hidden = false;
+  btn.addEventListener('click', () => {
+    extras.forEach(el => { el.hidden = false; });
+    btn.setAttribute('aria-expanded', 'true');
+    more.hidden = true;
+    // ボタンが消えるので、開いた最初の声にフォーカスを移す
+    extras[0].setAttribute('tabindex', '-1');
+    extras[0].focus({preventScroll:true});
+    if(typeof gtag === 'function') gtag('event', 'voices_more_click', {voices_count: extras.length});
+  });
+})();
 
 // Mobile nav toggle
 (function(){
